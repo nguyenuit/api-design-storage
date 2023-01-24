@@ -44,13 +44,6 @@ function authenToken(req, res, next){
     
 }
 
-app.post('/login', (req, res) => {
-    const data = req.body;
-    console.log(data);
-    const accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '30s' })
-    res.json({ accessToken })
-})
-
 app.get('/books', authenToken, (req, res) => {
     res.json({
         status: 'Success! Get paid by your work! Demand on JS skill!',

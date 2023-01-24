@@ -32,7 +32,7 @@ const books = [
     }
 ]
 
-app.get('/login', (req, res) => {
+app.post('/login', (req, res) => {
 
     const data = req.body;
     const accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '30s' })

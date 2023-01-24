@@ -41,7 +41,6 @@ function authenToken(req, res, next){
         if (error) res.sendStatus(403)
         next()
     })
-    
 }
 
 app.get('/books', authenToken, (req, res) => {

@@ -1,10 +1,17 @@
 GET http://localhost:5000/books
-Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5ndXllbiIsImlhdCI6MTY3NDU4MDAyNSwiZXhwIjoxNjc0NTgwMDg1fQ.AXKAvuPcvoefIF-aspxyAtLBOvW4L9t5kyP5vQN0QtI
-
+Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5ndXllbiIsImlhdCI6MTY3NDU4MjQxNywiZXhwIjoxNjc0NTgyNDc3fQ.mGJW7WXhO3dqAaWf0Kp-Ikf66WYJAkCoUWsMFyi0XS0
 ###
 POST http://localhost:5500/login
 Content-Type: application/json
 
 {
     "username": "Nguyen"
+}
+
+###
+POST http://localhost:5500/refreshToken
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5ndXllbiIsImlhdCI6MTY3NDU4MjQwM30.nv3PKlzv9vfjmI3xKJnVLORd8JTYZ9j8VtwhGWhsjUM"
 }

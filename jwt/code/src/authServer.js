@@ -23,6 +23,12 @@ app.post('/refreshToken', (req, res) => {
     })
 });
 
+app.post('/logout', (req, res) => {
+    const refreshToken = req.body.token;
+    refreshTokens = refreshTokens.filter(refToken => refToken !== refreshToken)
+    res.sendStatus(200);
+})
+
 app.post('/login', (req, res) => {
     const data = req.body;
     console.log(data);

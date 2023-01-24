@@ -13,5 +13,13 @@ POST http://localhost:5500/refreshToken
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5ndXllbiIsImlhdCI6MTY3NDU4MjQwM30.nv3PKlzv9vfjmI3xKJnVLORd8JTYZ9j8VtwhGWhsjUM"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5ndXllbiIsImlhdCI6MTY3NDU4MzAwN30.xE-5bPm1TmfjCpJEObaBlL37s5JYXGKWfVJqh2dqchE"
+}
+
+###
+POST http://localhost:5500/logout
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5ndXllbiIsImlhdCI6MTY3NDU4MzAwN30.xE-5bPm1TmfjCpJEObaBlL37s5JYXGKWfVJqh2dqchE"
 }

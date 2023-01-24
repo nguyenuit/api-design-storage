@@ -1,7 +1,9 @@
 GET http://localhost:5000/books
+Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5ndXllbiIsImlhdCI6MTY3NDU1ODY2NiwiZXhwIjoxNjc0NTU4Njk2fQ.d_cqQp8TIBHkCBImrKUl3Gq2lLvJlhtvP-F3cYvBK8A
 
 ###
 POST http://localhost:5000/login
+Content-Type: application/json
 
 {
     "username": "Nguyen"

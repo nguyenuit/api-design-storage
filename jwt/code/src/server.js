@@ -32,14 +32,23 @@ const books = [
     }
 ]
 
-app.post('/login', (req, res) => {
+function authenToken(req, res, next){
+    const authorizationHeader = req.headers['authorization']
+    const token = authorizationHeader.split(' ')[1]
+    if (!token) res.sendStatus(401)
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (error, data) => {
+        console.log(error, data);
+    })
+}
 
+app.post('/login', (req, res) => {
     const data = req.body;
+    console.log(data);
     const accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '30s' })
     res.json({ accessToken })
 })
 
-app.get('/books', (req, res) => {
+app.get('/books', authenToken, (req, res) => {
     res.json({
         status: 'Success! Get paid by your work! Demand on JS skill!',
         data: books
